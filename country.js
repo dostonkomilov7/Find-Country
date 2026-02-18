@@ -18,6 +18,7 @@ async function fn() {
         const res = await fetch(link);
 
         if (!res.ok) {
+            input.textContent = "";
             start.textContent = "ENTER COUNTRY";
             alert("‼️ COUNTRY NOT FOUND ‼️");
             throw new NotFoundException("COUNTRY NOT FOUND");
