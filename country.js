@@ -18,8 +18,9 @@ async function fn() {
         const res = await fetch(link);
 
         if (!res.ok) {
-            alert("‼️ DAVLAT TOPILMADI ‼️");
-            throw new NotFoundException("DAVLAT TOPILMADI");
+            start.textContent = "ENTER COUNTRY";
+            alert("‼️ COUNTRY NOT FOUND ‼️");
+            throw new NotFoundException("COUNTRY NOT FOUND");
         }
         const data = await res.json();
         getInfo(data);
